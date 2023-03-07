@@ -1,0 +1,27 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Hooks's Fortnite Hub", "Midnight")
+
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Inf Yield Stuff")
+MainSection:NewSlider("Speed", "Speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+MainSection:NewSlider("Jump", "Jump", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+MainSection:NewButton("Fly", "X To Toggle", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/LErPjitN"))();
+end)
+MainSection:NewButton("Inf Jump", "Balls", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/DZ5LTjRQ"))();
+end)
+MainSection:NewButton("Reset WS / JP", "Resets your walkspeed and jumppower to default", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+local Main = Window:NewTab("Aim")
+local MainSection = Main:NewSection("Aimlocks")
+MainSection:NewButton("Universal Lock", "balls", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
